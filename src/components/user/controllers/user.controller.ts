@@ -4,7 +4,6 @@ import { UserService } from '../services/user.service';
 import { QeuryUserRequestDto } from '../dto/query-user.request.dto';
 import { QeuryUserResponseDto } from '../dto/query-user.response.dto';
 import { ApiTags } from '@nestjs/swagger';
-
 @Controller('user')
 @ApiTags('User')
 export class UserController {

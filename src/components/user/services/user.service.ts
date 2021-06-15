@@ -18,7 +18,7 @@ export class UserService {
   }
 
   async find(req: QeuryUserRequestDto): Promise<QeuryUserResponseDto> {
-    const { q, skip, limit, includeTotal, sort, projection } = req;
+    let { q, skip, limit, includeTotal, sort, projection } = req;
     const mongoQuery: FilterQuery<UserDto> = {};
 
     if (q) {

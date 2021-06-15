@@ -1,8 +1,8 @@
 {
-  "name": "nestjs-template",
+  "name": "pdfgen-api",
   "version": "0.0.1",
-  "description": "",
-  "author": "",
+  "description": "Build a modern pdf service",
+  "author": "Sanni Michael",
   "license": "MIT",
   "scripts": {
     "prebuild": "rimraf dist",

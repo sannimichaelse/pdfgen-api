@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
 import { CommonModule } from './common/common.module';
 import { CoreModule } from './core/core.module';
-import { UserModule } from './user/user.module';
+import { UserModule } from './components/user/user.module';
 import { TypegooseModule } from 'nestjs-typegoose';
 import { config } from './config';
 

@@ -12,6 +12,9 @@ import { AuthGuard } from './core/guards/auth.guard';
 import { config } from './config';
 import { LoggerService } from './core/services/logger.service';
 import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
+import { PlanService } from './components/plan/services/plan.service';
+import { getModelForClass } from '@typegoose/typegoose';
+import PlanModel from './components/plan/models/plan.model';
 
 const logger: LoggerService = LoggerService.createLogger('BootstrapApp');
 
@@ -27,6 +30,15 @@ async function bootstrap() {
 
   // Apply helmet middleware
   app.use(helmet());
+
+  // seed plan
+  // const planModel = getModelForClass(PlanModel)
+  // const plan = new PlanService(planModel)
+  // const seeded = await plan.getPlans();
+  // if(seeded.length === 0){
+  //   await plan.startPlanSeeding()
+  //   logger.log(`Plans seeded successfully`);
+  // }
 
   await app.listenAsync(config.port);
   logger.log(`Server listen on http://localhost:${config.port}`);

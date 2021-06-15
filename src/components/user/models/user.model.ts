@@ -14,25 +14,13 @@ export class UserModel {
   @prop({ type: String, required: true, trim: true })
   public email: string;
 
-  @prop({ type: String, trim: true })
-  public displayName?: string;
-
-  @prop({ type: String, trim: true })
-  public firstName?: string;
-
-  @prop({ type: String, trim: true })
-  public lastName?: string;
+  @prop({ type: String,  required: true, trim: true, default: 'user' })
+  public role?: string;
 
   @prop({ type: Date, default: Date.now })
   public createdAt: Date;
 
-  @prop({ type: String, trim: true })
-  public createdBy: string;
-
   @prop({ type: Date, default: Date.now })
   public updatedAt: Date;
-
-  @prop({ type: String, trim: true })
-  public updatedBy: string;
 
 }
